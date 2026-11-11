@@ -1,0 +1,10 @@
+services:
+  tvm-compiler-optimizer:
+    build: .
+    container_name: tvm-compiler-optimizer
+    volumes:
+      - .:/app
+    environment:
+      - PYTHONUNBUFFERED=1
+    command: python3 benchmark.py
+    restart: "no"
